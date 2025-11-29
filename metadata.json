@@ -1,5 +1,5 @@
 {
-  "name": "Recapio - YouTube to Whiteboard",
-  "description": "Transform YouTube videos into beautiful, hand-drawn style infographics using Gemini AI analysis and image generation.",
+  "name": "MindCanvas",
+  "description": "Transform YouTube videos into beautiful, hand-drawn style infographics using Gemini AI.",
   "requestFramePermissions": []
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Loader2 } from 'lucide-react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'glass';
   isLoading?: boolean;
 }
 
@@ -14,12 +14,13 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
   ...props 
 }) => {
-  const baseStyles = "px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 active:scale-95";
+  const baseStyles = "px-6 py-3 rounded-2xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 active:scale-95";
   
   const variants = {
-    primary: "bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-200",
-    secondary: "bg-gray-900 hover:bg-gray-800 text-white shadow-lg",
-    outline: "border-2 border-gray-200 hover:border-blue-500 text-gray-700 hover:text-blue-600 bg-white",
+    primary: "bg-indigo-600 hover:bg-indigo-700 text-white shadow-xl shadow-indigo-200 hover:shadow-indigo-300",
+    secondary: "bg-gray-800 hover:bg-gray-900 text-white shadow-lg",
+    outline: "border-2 border-indigo-100 hover:border-indigo-300 text-indigo-700 bg-white/50 backdrop-blur-sm",
+    glass: "bg-white/40 hover:bg-white/60 backdrop-blur-md border border-white/50 text-indigo-900 shadow-sm",
   };
 
   return (
